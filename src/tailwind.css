@@ -1,0 +1,52 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.btn {
+    @apply font-semibold py-2 px-4 rounded transition duration-100 focus:outline-none
+}
+
+.btn-primary {
+    @apply bg-primary-500 hover:bg-primary-600 text-white focus:ring
+}
+
+.nav .nav-link {
+    @apply block py-4 px-2 font-medium text-base text-[#888888] hover:text-gray-500 capitalize
+}
+
+.nav li {
+    @apply w-full lg:w-auto
+}
+
+.nav .nav-link.active {
+    @apply border-b-2 border-primary-500 text-primary-500
+}
+
+.label {
+    @apply text-sm font-normal uppercase mb-2 text-[#95979D]
+}
+
+.checkbox-primary {
+    @apply w-4 h-4 border-2 border-gray-300 cursor-pointer rounded accent-primary-500 focus:ring-blue-500 dark:focus:ring-blue-600
+}
+
+.table {
+    @apply w-full
+}
+
+.table thead th {
+    @apply px-3 py-3 text-xs font-medium text-[#92929D] uppercase text-left
+}
+
+.table tbody td {
+    @apply px-2 py-3 text-sm font-normal text-[#494949]
+}
+
+.badge {
+    @apply px-2 py-1 text-xs text-white font-normal rounded-full
+}
+
+.slideover{
+    @apply w-full bg-white text-left fixed h-screen top-0 left-0
+}
