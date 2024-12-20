@@ -12,7 +12,6 @@
   },
   "dependencies": {
     "@fontsource/poppins": "^5.1.0",
-    "apexcharts": "^4.2.0",
     "axios": "^1.7.9",
     "chart.js": "^4.4.7"
   }
