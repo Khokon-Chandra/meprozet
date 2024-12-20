@@ -73,3 +73,15 @@ input[type="number"] {
     [&::-webkit-slider-thumb]:ring-4
     [&::-webkit-slider-thumb]:ring-gray-100
 }
+
+
+select option {
+    background-color: white; /* Background color for options */
+    color: #333; /* Text color for options */
+  }
+  
+  /* For Webkit-based browsers (like Chrome, Edge, and Safari) */
+  select::-webkit-scrollbar {
+    width: 5px;
+    background-color: rgb(215, 200, 248);
+  }
