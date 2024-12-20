@@ -1,12 +1,18 @@
 import { defineConfig } from 'vite';
 
 export default defineConfig({
-    root: './src', // Set the root directory to ./src
-    build: {
-        outDir: '../dist', // Output directory for the build files
-        emptyOutDir: true,
+  root: './src',
+  build: {
+    rollupOptions: {
+      input: {
+        main: './src/index.html', // Entry for index.html
+        report: './src/report.html', // Entry for report.html
+      },
     },
-    server: {
-        open: true, // Automatically open the app in your browser
-    },
+    outDir: '../dist', // Output directory
+    emptyOutDir: true,
+  },
+  server: {
+    open: true,
+  },
 });
