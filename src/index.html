@@ -68,20 +68,78 @@
                     <label for="" class="label">Performance
                         (Q)</label>
                     <div class="rounded border border-[#E4E6EC] p-1 flex justify-between">
-                        <button class="btn btn-primary">m/h</button>
+
+                        <div class="flex-shrink-0 relative">
+                            <button id="dropdownDefaultButton" data-dropdown-toggle="dropdown"
+                                class="text-white bg-primary-500 hover:bg-primary-600 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center"
+                                type="button">
+                                <span id="dropdownButtonValue" class="font-semibold">1/mh</span>
+                                <svg class="w-2.5 h-2.5 ms-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                                    fill="none" viewBox="0 0 10 6">
+                                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                        stroke-width="2" d="m1 1 4 4 4-4" />
+                                </svg>
+                            </button>
+
+                            <!-- Dropdown menu -->
+                            <div id="dropdown"
+                                class="absolute z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow-2xl w-60">
+                                <ul class="py-2 text-sm text-gray-700" aria-labelledby="dropdownDefaultButton">
+                                    <li>
+                                        <a href="javascript:void(0)"
+                                            class="dropdown-link block px-4 py-2 hover:bg-gray-100" value="m³/h"
+                                            id="dropm3h">metry sześcienne na godzinę</a>
+                                    </li>
+
+                                    <li>
+                                        <a href="javascript:void(0)"
+                                            class="dropdown-link block px-4 py-2 hover:bg-gray-100" value="m³/m"
+                                            id="dropm3m">metry sześcienne na minutę</a>
+                                    </li>
+
+                                    <li>
+                                        <a href="javascript:void(0)"
+                                            class="dropdown-link block px-4 py-2 hover:bg-gray-100" value="m³/s"
+                                            id="dropm3s">metry sześcienne na sekundę</a>
+                                    </li>
+
+                                    <li>
+                                        <a href="javascript:void(0)"
+                                            class="dropdown-link block px-4 py-2 hover:bg-gray-100" value="l/h"
+                                            id="droplh">litry na godzinę</a>
+                                    </li>
+
+                                    <li>
+                                        <a href="javascript:void(0)"
+                                            class="dropdown-link block px-4 py-2 hover:bg-gray-100" value="l/m"
+                                            id="droplm">litry na minutę</a>
+                                    </li>
+
+                                    <li>
+                                        <a href="javascript:void(0)"
+                                            class="dropdown-link block px-4 py-2 hover:bg-gray-100" value="l/s"
+                                            id="dropls">litry na sekundę</a>
+                                    </li>
+
+                                </ul>
+                            </div>
+                        </div>
 
                         <div class="flex items-center gap-6 md:gap-2 px-2">
-                            <button
-                                class="w-[24px] h-[24px] bg-[#D9D9D9] rounded-full text-white text-center text-xl cursor-pointer">
+                            <button onclick="decrement('#performance')"
+                                class="w-[24px] h-[24px] bg-gray-light hover:bg-gray-300 rounded-full text-white text-center text-xl cursor-pointer">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
                                     <path fill="currentColor" d="M19 12.998H5v-2h14z" />
                                 </svg>
                             </button>
 
-                            <div class="text-dark text-base font-regular">229</div>
+                            <div class="text-dark text-base font-regular">
+                                <div id="performance" class="text-dark text-base font-normal" type="number"
+                                    value="229">229</div>
+                            </div>
 
-                            <button
-                                class="w-[24px] h-[24px] bg-[#D9D9D9] rounded-full text-white text-center text-xl cursor-pointer">
+                            <button onclick="increment('#performance')"
+                                class="w-[24px] h-[24px] bg-gray-light hover:bg-gray-300 rounded-full text-white text-center text-xl cursor-pointer">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
                                     <path fill="currentColor" d="M19 12.998h-6v6h-2v-6H5v-2h6v-6h2v6h6z" />
                                 </svg>
@@ -99,16 +157,18 @@
 
                         <div class="flex items-center justify-between gap-6 md:gap-2 px-2">
                             <button
-                                class="w-[24px] h-[24px] bg-gray-light rounded-full text-white text-center text-xl cursor-pointer">
+                                onclick="decrement('#pipline')"
+                                class="w-[24px] h-[24px] bg-gray-light hover:bg-gray-300 rounded-full text-white text-center text-xl cursor-pointer">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
                                     <path fill="currentColor" d="M19 12.998H5v-2h14z" />
                                 </svg>
                             </button>
 
-                            <div class="text-dark text-base font-regular">229</div>
+                            <div id="pipline" class="text-dark text-base font-normal">229</div>
 
                             <button
-                                class="w-[24px] h-[24px] bg-gray-light rounded-full text-white text-center text-xl cursor-pointer">
+                                onclick="increment('#pipline')"
+                                class="w-[24px] h-[24px] bg-gray-light hover:bg-gray-300 rounded-full text-white text-center text-xl cursor-pointer">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
                                     <path fill="currentColor" d="M19 12.998h-6v6h-2v-6H5v-2h6v-6h2v6h6z" />
                                 </svg>
@@ -127,16 +187,18 @@
 
                         <div class="flex items-center justify-between gap-6 md:gap-2 px-2">
                             <button
-                                class="w-[24px] h-[24px] bg-gray-light rounded-full text-white text-center text-xl cursor-pointer">
+                                onclick="decrement('#lifting')"
+                                class="w-[24px] h-[24px] bg-gray-light hover:bg-gray-300 rounded-full text-white text-center text-xl cursor-pointer">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
                                     <path fill="currentColor" d="M19 12.998H5v-2h14z" />
                                 </svg>
                             </button>
 
-                            <div class="text-dark text-base font-regular">229</div>
+                            <div id="lifting" class="text-dark text-base font-normal">229</div>
 
                             <button
-                                class="w-[24px] h-[24px] bg-gray-light rounded-full text-white text-center text-xl cursor-pointer">
+                                onclick="increment('#lifting')"
+                                class="w-[24px] h-[24px] bg-gray-light hover:bg-gray-300 rounded-full text-white text-center text-xl cursor-pointer">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
                                     <path fill="currentColor" d="M19 12.998h-6v6h-2v-6H5v-2h6v-6h2v6h6z" />
                                 </svg>
@@ -150,16 +212,48 @@
                 <div>
                     <label for="" class="label">Pipeline
                         diameter</label>
-                    <div class="rounded border border-[#E4E6EC] p-1 flex gap-8">
-                        <button class="btn btn-primary flex flex-nowrap text-nowrap">
-                            <span>343 mm</span>
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-                                <path fill="currentColor"
-                                    d="M9.176 10.376a.6.6 0 0 1 .848 0L12 12.352l1.976-1.976a.6.6 0 0 1 .848.848l-2.4 2.4a.6.6 0 0 1-.848 0l-2.4-2.4a.6.6 0 0 1 0-.848" />
-                            </svg>
-                        </button>
+                    <div class="rounded border border-[#E4E6EC] p-1">
+                        <div class="relative">
+                            <!-- Custom Select -->
+                            <select
+                                class="block w-32 px-4 py-2 pr-10 text-white bg-primary-500 border border-gray-300 rounded-md shadow-sm appearance-none focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+                                <option value="32" id="d32">32 mm</option>
+                                <option value="40" id="d40">40 mm</option>
+                                <option value="50" id="d50" selected="">50 mm</option>
+                                <option value="63" id="d63">63 mm</option>
+                                <option value="65" id="d65">65 mm</option>
+                                <option value="70" id="d70">70 mm</option>
+                                <option value="80" id="d80"> 80 mm</option>
+                                <option value="90" id="d90">90 mm</option>
+                                <option value="100" id="d100">100 mm</option>
+                                <option value="110" id="d110">110 mm</option>
+                                <option value="125" id="d125">125 mm</option>
+                                <option value="140" id="d140">140 mm</option>
+                                <option value="150" id="d150">150 mm</option>
+                                <option value="160" id="d160">160 mm</option>
+                                <option value="180" id="d180">180 mm</option>
+                                <option value="200" id="d200">200 mm</option>
+                                <option value="225" id="d225">225 mm</option>
+                                <option value="250" id="d250">250 mm</option>
+                                <option value="280" id="d280">280 mm</option>
+                                <option value="315" id="d315">315 mm</option>
+                            </select>
+
+                            <!-- Dropdown Icon -->
+                            <div class="absolute inset-y-0 right-0 flex items-center px-2 pointer-events-none">
+                                <!-- Use an SVG for the dropdown icon -->
+                                <svg class="w-5 h-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none"
+                                    viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M19 9l-7 7-7-7" />
+                                </svg>
+                            </div>
+                        </div>
                     </div>
                 </div>
+
+
+
 
 
 
