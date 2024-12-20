@@ -48,7 +48,7 @@
 }
 
 .slideover{
-    @apply w-full bg-white text-left fixed h-screen top-0 left-0
+    @apply w-full bg-white text-left fixed h-screen top-0 left-0 z-30
 }
 
 input[type="number"]::-webkit-inner-spin-button,
